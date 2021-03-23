@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+## Application URL
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[https://react-recipe-search-c90d0.firebaseapp.com/](https://react-recipe-search-c90d0.firebaseapp.com/).
 
 ## Available Scripts
 
