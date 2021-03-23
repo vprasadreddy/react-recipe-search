@@ -2,6 +2,22 @@
 
 [https://react-recipe-search-c90d0.firebaseapp.com/](https://react-recipe-search-c90d0.firebaseapp.com/).
 
+## Application Screenshots
+
+![Screen Shot 2021-03-23 at 11 40 11 AM](https://user-images.githubusercontent.com/44241854/112174689-fc744680-8bcc-11eb-87e6-d40bd39e16b0.png)
+
+![Screen Shot 2021-03-23 at 11 40 20 AM](https://user-images.githubusercontent.com/44241854/112174762-0e55e980-8bcd-11eb-8cd0-8c0e07fadc0a.png)
+
+![Screen Shot 2021-03-23 at 11 40 40 AM](https://user-images.githubusercontent.com/44241854/112174814-1746bb00-8bcd-11eb-9794-f1e9649e1460.png)
+
+![Screen Shot 2021-03-23 at 11 42 29 AM](https://user-images.githubusercontent.com/44241854/112175031-465d2c80-8bcd-11eb-9340-057010c3bae3.png)
+
+![Screen Shot 2021-03-23 at 11 41 31 AM](https://user-images.githubusercontent.com/44241854/112174906-2af22180-8bcd-11eb-8398-dab3d028c8b5.png)
+
+![Screen Shot 2021-03-23 at 11 41 57 AM](https://user-images.githubusercontent.com/44241854/112174955-347b8980-8bcd-11eb-9c90-b231f0aec8b2.png)
+
+![Screen Shot 2021-03-23 at 11 48 00 AM](https://user-images.githubusercontent.com/44241854/112175479-a81d9680-8bcd-11eb-8df3-834c20d18388.png)
+
 ## Available Scripts
 
 In the project directory, you can run:
