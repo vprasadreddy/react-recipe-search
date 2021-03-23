@@ -1,6 +1,6 @@
 ## Application URL
 
-[https://react-recipe-search-c90d0.firebaseapp.com/](https://react-recipe-search-c90d0.firebaseapp.com/).
+[https://react-recipe-search-c90d0.firebaseapp.com/](https://react-recipe-search-c90d0.firebaseapp.com/)
 
 ## Application Screenshots
 
