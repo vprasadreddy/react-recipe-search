@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
 import * as APIkey from "./APIkey";
+import Swal from "sweetalert2";
 import { Jumbotron, Button, Form, Col } from "react-bootstrap";
 
 function App() {
@@ -19,10 +20,22 @@ function App() {
       let APP_KEY = APIkey.APP_KEY;
       let APIURL = `https://api.edamam.com/search?q=${queryText}&app_id=${APP_ID}&app_key=${APP_KEY}&from=0&to=9&calories=591-722&health=alcohol-free`;
       const result = await axios.get(APIURL);
-      setRecipes(result.data.hits);
-      console.log(result.data.hits);
+      if (result.data.hits.length > 0) {
+        setRecipes(result.data.hits);
+        //console.log(result.data.hits);
+      } else {
+        setRecipes(result.data.hits);
+        Swal.fire({
+          icon: "error",
+          text: "Sorry, no recipes found."
+        });
+      }
     } else {
-      alert("Please enter name of the recipe.");
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Please enter name of the recipe."
+      });
     }
   }
 
@@ -34,14 +47,16 @@ function App() {
       <div className="d-flex justify-content-center m-5">
         <form className="form-inline">
           <label className="mb-2 mr-sm-2" htmlFor="recipequerytext">
-            Enter Recipe Name:
+            Enter a Recipe Name:
           </label>
           <input
             type="search"
             className="form-control mb-2 mr-sm-2"
             id="recipequerytext"
-            placeholder="pasta"
+            placeholder="for ex: pasta"
             onChange={handleInputChange}
+            required
+            pattern="[a-zA-Z0-9\s]+"
           />
           <button
             type="submit"
