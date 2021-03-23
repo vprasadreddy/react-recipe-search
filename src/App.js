@@ -48,7 +48,7 @@ function App() {
             className="btn btn-primary mb-2 mr-sm-2"
             onClick={getRecipes}
           >
-            Search...
+            Search
           </button>
         </form>
       </div>
