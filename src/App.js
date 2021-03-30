@@ -5,6 +5,7 @@ import axios from "axios";
 import * as APIkey from "./APIkey";
 import Swal from "sweetalert2";
 import { Jumbotron, Button, Form, Col } from "react-bootstrap";
+import ScrollToTop from "./ScrollToTop";
 
 function App() {
   const handleInputChange = (e) => {
@@ -71,7 +72,7 @@ function App() {
         {recipes.length > 0 ? (
           <>
             {recipes.map((recipe, index) => {
-              console.log(recipe.recipe["label"]);
+              //console.log(recipe.recipe["label"]);
               return (
                 <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 d-flex justify-content-center">
                   <div
@@ -104,6 +105,7 @@ function App() {
           </>
         ) : null}
       </div>
+      <ScrollToTop />
     </div>
   );
 }
