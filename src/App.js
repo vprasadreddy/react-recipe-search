@@ -84,7 +84,7 @@ function App() {
                       className="card-img-top"
                       src={recipe.recipe.image}
                       alt="Card image cap"
-                      style={{ width: "250px", height: "250px" }}
+                      style={{ width: "248px", height: "250px" }}
                     />
                     <div className="card-body">
                       <p className="card-title text-truncate text-secondary">
