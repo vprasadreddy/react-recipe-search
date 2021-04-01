@@ -2,7 +2,6 @@ import logo from "./logo.svg";
 import { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
-import * as APIkey from "./APIkey";
 import Swal from "sweetalert2";
 import { Jumbotron, Button, Form, Col } from "react-bootstrap";
 import ScrollToTop from "./ScrollToTop";
@@ -19,9 +18,7 @@ function App() {
     e.preventDefault();
     if (queryText != "") {
       setIsLoading(true);
-      let APP_ID = APIkey.APP_ID;
-      let APP_KEY = APIkey.APP_KEY;
-      let APIURL = `https://api.edamam.com/search?q=${queryText}&app_id=${APP_ID}&app_key=${APP_KEY}&from=0&to=9&calories=591-722&health=alcohol-free`;
+      let APIURL = `https://api.edamam.com/search?q=${queryText}&app_id=${process.env.REACT_APP_APP_ID}&app_key=${process.env.REACT_APP_API_KEY}&from=0&to=9&calories=591-722&health=alcohol-free`;
       const result = await axios.get(APIURL);
       setIsLoading(false);
       if (result.data.hits.length > 0) {
