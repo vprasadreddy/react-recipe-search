@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaArrowUp } from "react-icons/fa";
+import $ from "jquery";
 
 function ScrollToTop() {
   const [isScrollIconVisible, setIsScrollIconVisible] = useState(false);
@@ -30,10 +31,11 @@ function ScrollToTop() {
   }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+    /* window.scrollTo({
       top: 0,
       behavior: "smooth"
-    });
+    }); */
   };
 
   const toggleScrollIconVisibility = () => {
