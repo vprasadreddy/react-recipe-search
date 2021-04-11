@@ -18,7 +18,7 @@ function App() {
     e.preventDefault();
     if (queryText != "") {
       setIsLoading(true);
-      let APIURL = `https://api.edamam.com/search?q=${queryText}&app_id=${process.env.REACT_APP_APP_ID}&app_key=${process.env.REACT_APP_API_KEY}&from=0&to=9&calories=591-722&health=alcohol-free`;
+      let APIURL = `https://api.edamam.com/search?q=${queryText}&app_id=${process.env.REACT_APP_APP_ID}&app_key=${process.env.REACT_APP_API_KEY}&from=0&to=12&calories=591-722&health=alcohol-free`;
       const result = await axios.get(APIURL);
       setIsLoading(false);
       if (result.data.hits.length > 0) {
@@ -79,7 +79,7 @@ function App() {
                 return (
                   <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 d-flex justify-content-center">
                     <div
-                      className="card m-2"
+                      className="card m-2 card-style"
                       key={index}
                       style={{ minWidth: "250px", maxWidth: "250px" }}
                     >
