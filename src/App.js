@@ -42,7 +42,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="d-flex justify-content-center mt-3 animate__animated animate__bounceInLeft">
+      <h1 className="d-flex justify-content-center mt-3 animate__animated animate__fadeInDown">
         Food Recipe Search Application using React
       </h1>
       <div className="d-flex justify-content-center m-5">
@@ -71,7 +71,7 @@ function App() {
       {isLoading ? (
         <LoadingSpinner />
       ) : (
-        <div className="row animate__animated animate__fadeInDown">
+        <div className="row animate__animated animate__bounceInLeft">
           {recipes.length > 0 ? (
             <>
               {recipes.map((recipe, index) => {
