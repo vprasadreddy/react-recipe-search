@@ -18,7 +18,7 @@ function App() {
     e.preventDefault();
     if (queryText != "") {
       setIsLoading(true);
-      let APIURL = `https://api.edamam.com/search?q=${queryText}&app_id=${process.env.REACT_APP_APP_ID}&app_key=${process.env.REACT_APP_API_KEY}&from=0&to=12&calories=591-722&health=alcohol-free`;
+      let APIURL = `https://react-recipe-search-heroku.herokuapp.com/recipes/${queryText}`;
       const result = await axios.get(APIURL);
       setIsLoading(false);
       if (result.data.hits.length > 0) {
