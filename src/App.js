@@ -18,7 +18,7 @@ function App() {
     e.preventDefault();
     if (queryText != "") {
       setIsLoading(true);
-      let APIURL = `https://react-recipe-search-heroku.herokuapp.com/recipes/${queryText}`;
+      let APIURL = `https://react-recipe-search-backend.vercel.app/${queryText}`;
       const result = await axios.get(APIURL);
       setIsLoading(false);
       if (result.data.hits.length > 0) {
@@ -28,14 +28,14 @@ function App() {
         setRecipes(result.data.hits);
         Swal.fire({
           icon: "error",
-          text: "Sorry, no recipes found."
+          text: "Sorry, no recipes found.",
         });
       }
     } else {
       Swal.fire({
         icon: "error",
         title: "Oops...",
-        text: "Please enter name of the recipe."
+        text: "Please enter name of the recipe.",
       });
     }
   }
