@@ -18,7 +18,7 @@ function App() {
     e.preventDefault();
     if (queryText != "") {
       setIsLoading(true);
-      let APIURL = `https://react-recipe-search-backend.vercel.app/${queryText}`;
+      let APIURL = `https://react-recipe-search-backend.vercel.app/recipes/${queryText}`;
       const result = await axios.get(APIURL);
       setIsLoading(false);
       if (result.data.hits.length > 0) {
